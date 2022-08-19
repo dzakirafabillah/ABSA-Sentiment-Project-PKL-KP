@@ -3,7 +3,7 @@ from fastapi import FastAPI, HTTPException
 from joblib import load
 import predictor
 import torch
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import AutoTokenizer
 from ABSA_SentimentMultiEmiten.model.bert import bert_ABSA
 
 # Initialize an instance of FastAPI

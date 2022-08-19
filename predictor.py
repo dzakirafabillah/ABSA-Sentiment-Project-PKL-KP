@@ -3,7 +3,7 @@ import pandas as pd
 import time
 import numpy as np
 import numpy as np
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+from transformers import AutoTokenizer
 import torch
 from torch.nn.utils.rnn import pad_sequence
 from ABSA_SentimentMultiEmiten.model.bert import bert_ABSA

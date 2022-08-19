@@ -30,3 +30,5 @@ tensorflow_hub
 bert-for-tf2
 sentencepiece
 transformers==3
+protobuf==3.20.1
+torch
