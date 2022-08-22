@@ -18,4 +18,4 @@ COPY ./ABSA_SentimentMultiEmiten ./ABSA_SentimentMultiEmiten
 COPY ./models/bert_ABSA_11.pkl ./models/bert_ABSA_11.pkl
 # COPY ./vectors/vectorizer.pickle ./vectors/vectorizer.pickle
 
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
+CMD ["uvicorn", "app:app", "--host", "127.0.0.1", "--port", "80"]
