@@ -27,7 +27,10 @@ if choice == "1 Input":
                 predict = process_one(news)
                 st.json(predict.text)
             except:
-                st.write("FastAPI disconnected")
+                st.write("""
+                         ## SYSTEM ERROR
+                         - Check FastAPI connection
+                         - Check the input entered""")
                 
 elif choice == "2 Input":
     st.title("Sentiment Analysis")
@@ -44,4 +47,7 @@ elif choice == "2 Input":
                 predict = process_two(news)
                 st.json(predict.text)
             except:
-                st.write("FastAPI disconnected")
+                st.write("""
+                         ## SYSTEM ERROR
+                         - Check FastAPI connection
+                         - Check the input entered""")
