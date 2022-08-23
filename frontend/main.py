@@ -1,21 +1,15 @@
 import streamlit as st
 import requests
-# from ..backend.app import predict_sentiment_all_emiten
 
 def process_one(news : str):
-
     r = requests.post(f"http://127.0.0.1:8000/predict_sentiment_all_emiten/?news={news}")
-    
     return r
 
 def process_two(news : str, aspect : str):
-
     t = requests.post(f"http://127.0.0.1:8000/predict_sentiment_specific_emiten/?news={news}&aspect={aspect}")
-    
     return t
 
 # UI Layout
-
 menu = ["1 Input","2 Input"]
 choice = st.sidebar.selectbox("Menu",menu)
 
@@ -25,9 +19,8 @@ if choice == "1 Input":
 
     st.subheader("1 Input for Sentiment Analysis")
     with st.form(key='nlpForm'):
-        news = st.text_area("Enter Article Here")
+        news = st.text_area("Enter Article Here", height=200)
         submit_button = st.form_submit_button(label='Analyze')
-        
         if submit_button:
             st.info("Results")
             try:
@@ -42,10 +35,9 @@ elif choice == "2 Input":
     
     st.subheader("2 Input for Sentiment Analysis")
     with st.form(key='nlpForm'):
-        news = st.text_area("Enter Article Here")
+        news = st.text_area("Enter Article Here", height=200)
         aspect = st.text_input("Enter Aspect Here")
         submit_button = st.form_submit_button(label='Analyze')
-        
         if submit_button:
             st.info("Results")
             try:
