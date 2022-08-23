@@ -4,7 +4,7 @@ import requests
 
 def process_one(news : str):
 
-    r = requests.post("http://127.0.0.1:8000/predict_sentiment_all_emiten/?news="+news)
+    r = requests.post(f"http://127.0.0.1:8000/predict_sentiment_all_emiten/?news={news}")
     
     return r
 
