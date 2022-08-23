@@ -30,9 +30,12 @@ if choice == "1 Input":
         
         if submit_button:
             st.info("Results")
-            predict = process_one(news)
-            st.json(predict.text)
-            
+            try:
+                predict = process_one(news)
+                st.json(predict.text)
+            except:
+                st.write("FastAPI disconnected")
+                
 elif choice == "2 Input":
     st.title("Sentiment Analysis")
     st.subheader("Sentiment analysis of Indonesian stock company articles with BERT")
@@ -45,5 +48,8 @@ elif choice == "2 Input":
         
         if submit_button:
             st.info("Results")
-            predict = process_two(news, aspect)
-            st.json(predict.text)
+            try:
+                predict = process_two(news)
+                st.json(predict.text)
+            except:
+                st.write("FastAPI disconnected")
