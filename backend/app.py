@@ -1,6 +1,5 @@
 # Load the libraries
 from fastapi import FastAPI, HTTPException
-from joblib import load
 import predictor
 import torch
 from transformers import AutoTokenizer
@@ -14,34 +13,18 @@ app = FastAPI()
 def root():
     return {"message": "Welcome to Your Sentiment Classification FastAPI"}
 
-@app.post("/predict_sentiment")
-def predict_sentiment(news, aspect):
-    outputs = []
-    polarity = ""
-
+@app.post("/predict_sentiment_all_emiten")
+def predict_sentiment_all_emiten(news):
     if(not(news)):
         raise HTTPException(status_code=400, 
                             detail = "Please Provide a valid text message")
 
-    # Preprocessing
-    final_sentences = predictor.preprocessing_text(news, aspect)
-    
-    pretrain_model_name = "indolem/indobert-base-uncased"
-    tokenizer = AutoTokenizer.from_pretrained(pretrain_model_name)
+    return predictor.get_final_sentiment_artikel(news)
 
-    #Predicts
-    i = 0
-    sentiments = ["Negative", "Neutral", "Positive"]
-    while (i < (len(final_sentences))):
-        x, y, z = predictor.predict(final_sentences[i] , aspect, tokenizer)
+@app.post("/predict_sentiment_specific_emiten")
+def predict_sentiment_specific_emiten(news, aspect):
+    if(not(news)):
+        raise HTTPException(status_code=400, 
+                            detail = "Please Provide a valid text message")
 
-        y_str = str(y)
-        sentiment = sentiments[int(y_str[8])]
-        outputs.append({
-            "sentence": final_sentences[i],
-            "sentiment": sentiment
-        })
-
-        i = i+1
-        
-    return outputs
+    return predictor.get_final_sentiment_artikel(news, aspect)
