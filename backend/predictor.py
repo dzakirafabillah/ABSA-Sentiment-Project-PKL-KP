@@ -51,7 +51,7 @@ def predict_sentence(s, aspect):
     y_str = str(y)
     sentiment = sentiments[int(y_str[8])]
     output.append({
-      "sentence": arr_sentence_dirt[i],
+      "sentence": arr_sentence_dirt[i].strip(),
       "aspect": aspect,
       "sentiment": sentiment
     })
