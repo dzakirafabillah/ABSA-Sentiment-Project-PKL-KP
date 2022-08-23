@@ -1,12 +1,12 @@
 import streamlit as st
 import requests
 
-def process_one(news : str):
+def process_one(news):
     r = requests.post(f"http://127.0.0.1:8000/predict_sentiment_all_emiten/?news={news}")
     return r
 
-def process_two(news : str, aspect : str):
-    t = requests.post(f"http://127.0.0.1:8000/predict_sentiment_specific_emiten/?news={news}&aspect={aspect}")
+def process_two(news, aspect):
+    t = requests.post(f"http://127.0.0.1:8000/predict_sentiment_specific_emiten?news={news}&aspect={aspect}")
     return t
 
 # UI Layout
@@ -44,7 +44,7 @@ elif choice == "2 Input":
         if submit_button:
             st.info("Results")
             try:
-                predict = process_two(news)
+                predict = process_two(news, aspect)
                 st.json(predict.text)
             except:
                 st.write("""
