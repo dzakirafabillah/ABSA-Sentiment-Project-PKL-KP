@@ -9,3 +9,5 @@ Requirement used :
 - python 3.7.6
 - streamlit 1.12.0
 - requests 2.28.1
+
+NOTE : Make sure the backend is running
