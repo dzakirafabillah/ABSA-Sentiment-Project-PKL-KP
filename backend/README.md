@@ -36,5 +36,4 @@ To get a local copy up and running follow these simple example steps.
     `uvicorn app:app --reload`
 
 ##### Folder Structure :
--
 ![image](https://user-images.githubusercontent.com/61398214/186295869-4f9ac588-eb67-48aa-bada-b88d325abe8d.png)
