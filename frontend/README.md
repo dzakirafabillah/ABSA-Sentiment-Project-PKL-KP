@@ -15,7 +15,7 @@ To get a local copy up and running follow these simple example steps.
 #### Set Up
 1. Clone repository.
 ```sh
-    https://github.com/dzakirafabillah/ABSA-Sentiment-Project-PKL-KP
+    git clone https://github.com/dzakirafabillah/ABSA-Sentiment-Project-PKL-KP
 ```
 2. Masuk ke folder frontend
 ```sh
