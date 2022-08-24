@@ -38,7 +38,7 @@ if choose == "All Emiten":
 
     st.caption("Predict Sentiment All Emiten")
     with st.form(key='nlpForm'):
-        news = st.text_area("Enter Article Here")
+        news = st.text_area("Enter Article Here", height:200)
         submit_button = st.form_submit_button(label='Analyze')
         
         if submit_button:
@@ -56,7 +56,7 @@ elif choose == "Specific Emiten":
     
     st.caption("Predict Sentiment Specific Emiten")
     with st.form(key='nlpForm'):
-        news = st.text_area("Enter Article Here")
+        news = st.text_area("Enter Article Here", height:200)
         aspect = st.text_input("Enter Aspect Here")
         submit_button = st.form_submit_button(label='Analyze')
         
