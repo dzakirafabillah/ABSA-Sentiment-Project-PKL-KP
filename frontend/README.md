@@ -1,7 +1,5 @@
 # Frontend for ABSA Sentiment Project
 
-# Backend for ABSA Sentiment Project
-
 ## Getting Started
 
 This will give instructions on setting up your project locally.
