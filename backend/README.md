@@ -7,4 +7,5 @@ How To Run BackEnd
 4. buat run nya 'uvicorn app:app --reload'
 
 Struktur Folder :
+-
 ![image](https://user-images.githubusercontent.com/61398214/186295869-4f9ac588-eb67-48aa-bada-b88d325abe8d.png)
