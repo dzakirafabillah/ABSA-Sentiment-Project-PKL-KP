@@ -10,10 +10,10 @@ def process_two(news, aspect):
     return t
 
 # UI Layout
-menu = ["1 Input","2 Input"]
+menu = ["Input Artikel [1 Input]","Input Artikel dan Emiten [2 Input]"]
 choice = st.sidebar.selectbox("Menu",menu)
 
-if choice == "1 Input":
+if choice == "Input Artikel [1 Input]":
     st.title("Sentiment Analysis")
     st.subheader("Sentiment analysis of Indonesian stock company articles with BERT")
 
@@ -32,7 +32,7 @@ if choice == "1 Input":
                          - Check FastAPI connection
                          - Check the input entered""")
                 
-elif choice == "2 Input":
+elif choice == "Input Artikel dan Emiten [2 Input]":
     st.title("Sentiment Analysis")
     st.subheader("Sentiment analysis of Indonesian stock company articles with BERT")
     
