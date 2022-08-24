@@ -19,7 +19,11 @@ To get a local copy up and running follow these simple example steps.
 ```sh
     cd backend
 ```
-3. Clone https://github.com/1tangerine1day/Aspect-Term-Extraction-and-Analysis.git kemudian rename menjadi ABSA_SentimentMultiEmiten dan simpan dalam folder backend.
+3. Clone repository tambahan
+```sh
+    git clone https://github.com/1tangerine1day/Aspect-Term-Extraction-and-Analysis.git
+``` 
+    kemudian rename menjadi ABSA_SentimentMultiEmiten dan simpan dalam folder backend.
 4. Download model hasil training dan simpan di dalam folder models 
 5. Jalankan command 
     `pip install -r requirements.txt`
