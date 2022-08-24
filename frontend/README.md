@@ -1,14 +1,32 @@
 # Frontend for ABSA Sentiment Project
 
-## Step Run :
-- pip install streamlit & pip install requests
-- cd frontend (Go to location frontend )
-- streamlit run [name file] (example : streamlit run main.py)
+# Backend for ABSA Sentiment Project
 
-Requirement used :
-- python 3.7.6
-- streamlit 1.12.0
-- requests 2.28.1
+## Getting Started
+
+This will give instructions on setting up your project locally.
+To get a local copy up and running follow these simple example steps.
+
+### Installation
+
+#### Prerequisites
+* python 3.7.6
+
+#### Set Up
+1. Clone repository.
+```sh
+    https://github.com/dzakirafabillah/ABSA-Sentiment-Project-PKL-KP
+```
+2. Masuk ke folder frontend
+```sh
+    cd frontend
+```
+3. Install kebutuhan library
+    `pip install -r requirements.txt`
+
+#### Menjalanan Frontend
+1. Build API 
+    `streamlit run main.py`
 
 NOTE : Make sure the backend is running
 
