@@ -1,7 +1,6 @@
 # Backend for ABSA Sentiment Project
 
 ## How To Run BackEnd
--
 1. Clone https://github.com/1tangerine1day/Aspect-Term-Extraction-and-Analysis.git kemudian rename menjadi ABSA_SentimentMultiEmiten dan simpan dalam folder backend.
 2. Download model hasil training dan simpan di dalam folder models 
 3. Jalankan command 
