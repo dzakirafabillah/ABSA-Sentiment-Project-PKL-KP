@@ -10,22 +10,22 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 
 #### Prerequisites
-* python 3.7.6
+* Python 3.7.6
 
 #### Set Up
 1. Clone repository.
 ```sh
     git clone https://github.com/dzakirafabillah/ABSA-Sentiment-Project-PKL-KP
 ```
-2. Masuk ke folder frontend
+2. Go to frontend directory
 ```sh
     cd frontend
 ```
-3. Install kebutuhan library
+3. Install Requirements 
     `pip install -r requirements.txt`
 
 #### Menjalanan Frontend
-1. Build API 
+1. Run
     `streamlit run main.py`
 
 NOTE : Make sure the backend is running

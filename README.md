@@ -1,4 +1,4 @@
 # ABSA Sentiment Project 
 
 ## Prerequisites
-- python 3.7.6
+- Python 3.7.6
