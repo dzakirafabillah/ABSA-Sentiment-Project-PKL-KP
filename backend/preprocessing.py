@@ -8,7 +8,10 @@ def clean_sentences(sentences, aspect):
   for sentence in sentences:
     if ((aspect in sentence)):
       index = sentence.index(aspect)
-      emiten = (sentence[index-1].isalpha() == False) and (sentence[index+4].isalpha() == False) 
+      if(len(sentence) > index+4):
+        emiten = (sentence[index-1].isalpha() == False) and (sentence[index+4].isalpha() == False) 
+      else:
+        emiten = (sentence[index-1].isalpha() == False)
       if(emiten):
         new_sentences.append(sentence)
   return new_sentences
