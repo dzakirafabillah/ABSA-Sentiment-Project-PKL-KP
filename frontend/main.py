@@ -44,6 +44,7 @@ if choose == "All Emiten":
         if submit_button:
             st.info("Results")
             predict = process_one(news)
+            st.write(predict)
             st.json(predict.text)
 
 elif choose == "Specific Emiten":
@@ -62,4 +63,5 @@ elif choose == "Specific Emiten":
         if submit_button:
             st.info("Results")
             predict = process_two(news, aspect)
+            st.write(predict)
             st.json(predict.text)        
